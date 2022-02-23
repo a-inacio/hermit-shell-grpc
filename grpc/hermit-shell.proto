@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "github.com/a-inacio/hermit-shell-grpc";
+option java_multiple_files = true;
+option java_package = "io.hermit-shell.grpc";
+option java_outer_classname = "ShellProto";
+
+package io.hermit.shell;
+
+service HermitShell {
+  rpc SubscribeEvent (SubscribeEventRequest) returns (stream SubscribeEventReply) {}
+}
+
+// The request message containing the user's name.
+message SubscribeEventRequest {
+  string eventName = 1;
+}
+
+// The response message containing the greetings
+message SubscribeEventReply {
+  string payload = 1;
+}
