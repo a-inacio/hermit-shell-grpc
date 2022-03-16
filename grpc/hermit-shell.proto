@@ -7,7 +7,7 @@ option java_outer_classname = "ShellProto";
 
 package io.hermit.shell;
 
-service HermitShell {
+service HermitShellEvent {
   rpc SubscribeEvent (SubscribeEventRequest) returns (stream SubscribeEventReply) {}
 }
 
